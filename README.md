@@ -29,33 +29,53 @@ Authenticating SLIVER.tv users with your apps has the following flow:
 5. If the access token expires, use the refresh token to obtain a new access token.
 
 
-### User Authentication
-To begin the process of authenticating the users, open a window for them to login and grant your application permissions:
+## User Authentication
+To begin the process of authenticating users, open a window for them to login to SLIVER.tv and grant your application permissions:
 
-> https://www.sliver.tv/account/grant-app?client_id={YOUR_CLIENT_ID}&redirect_uri={YOUR_REDIRECT_URI}
+    https://www.sliver.tv/account/grant-app?client_id={YOUR_CLIENT_ID}&redirect_uri={YOUR_REDIRECT_URI}
 
 Note: The redirect_uri must match the URIs you provide when you setup your application.
 
 **Permission is Granted:**
-If the user accepts the permissions, the user will be redirected to your specified URI, with the query parameter `code`.
+If the user accepts the permissions, the user will be redirected to your specified URI, with the query parameter `code` appended.
+
+    https://www.yoursite.com/oauth/grant?code={SLIVER_CODE}
 
 **Permission is NOT Granted:**
-The user will be redirected to your specified URI without the `code` query parameter.
+The user will be redirected to your specified URI **without** the `code` query parameter.
 
+    https://www.yoursite.com/oauth/grant
 
-### Retrieving an Access and Refresh Token
+## Retrieving an Access and Refresh Token
 After you've received your one-time-use code, make a server-to-server call to:
 
-> https://api.sliver.tv/v1/oauth/token?client_id={CLIENT_ID}&client_secret={CLIENT_ID}&grant_type=authorization_code&code={CODE_GIVEN}
+    https://api.sliver.tv/v1/oauth/token?client_id={CLIENT_ID}&client_secret={CLIENT_ID}&grant_type=authorization_code&code={CODE_GIVEN}
 
 
 # Making API Calls
 Every API call your makes, you must include the Client ID in the header:
 
-> Client-ID: {CLIENT_ID}
+    Client-ID: {CLIENT_ID}
 
 If you are making an authorized call on the users behalf, include the users access token in the header:
 
-> Authorization: Bearer {ACCESS_TOKEN}
+    Authorization: Bearer {ACCESS_TOKEN}
 
 
+# Chat
+SLIVER.tv currently uses the pubnub service to drive chat. The steps to listening to chat messages are:
+
+1. Get your favorite flavor of PubNub SDK
+2. Get a pubnub client id from SLIVER.tv staff
+3. Subscribe to pubnub channels to receive read-only messages
+
+PubNub SDKs: https://www.pubnub.com/docs
+
+Please follow PubNub documentation for subscribing and listening to channels.
+
+## Subscribing to SLIVER.tv Chat
+
+Our chat channels are named with the following convention:
+    "chat.{CHANNEL_ID}"
+
+Where `{CHANNEL_ID}` is the user ID of the channel's owner. 
