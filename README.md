@@ -75,7 +75,7 @@ Please follow PubNub documentation for subscribing and listening to channels.
 
 ## Subscribing to SLIVER.tv Chat
 
-Our chat channels are named with the following convention:
+ When subscribing to channels through the PubNub SDK, you'll need to provide a channel name. These channel names are named using the following convention:
     "chat.{CHANNEL_ID}"
 
-Where `{CHANNEL_ID}` is the user ID of the channel's owner. 
+Where `{CHANNEL_ID}` is the user ID of the channel's owner.
