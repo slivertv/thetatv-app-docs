@@ -1,5 +1,5 @@
 # THETA.tv API Docs
-Public APIs for THETA.tv Apps
+Public APIs for THETA.tv Applications
 
 API Reference:
 https://documenter.getpostman.com/view/945111/SW7UapnJ
@@ -38,7 +38,7 @@ User authentication is only required if your application is making API calls on 
 > NOTE: Client IDs are **required for all API calls** made by an application - regardless if the API call requires authenticated or not. Any application not including a Client ID may have priveleges revoked.
 
 Authenticating THETA.tv users with your application has the following flow:
-1. Have the user login and grant permission to your app on THETA.tv.
+1. Have the user login and grant permission to your application on THETA.tv.
 2. This will provide you with a one-time use code.
 3. Make a server-to-server call with the code to retrieve the user's access token and refresh token.
 4. Make calls on the user's behalf, using the access token.
