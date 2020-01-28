@@ -56,7 +56,7 @@ To begin the process of authenticating users, open a window for them to login to
 
     https://www.theta.tv/account/grant-app?client_id={YOUR_CLIENT_ID}&redirect_uri={YOUR_REDIRECT_URI}
 
-Note: The redirect_uri must match the URIs you provide when you register your application.
+> Note: The redirect_uri must match the URIs you provide when you register your application.
 
 **Permission is Granted:**
 If the user accepts the permissions, the user will be redirected to your specified URI, with the query parameter `code` appended.
