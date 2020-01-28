@@ -43,7 +43,7 @@ User authentication is only required if your application is making API calls on 
 * Client IDs are public, and used by your application to identify itself. 
 * Client Secrets are private, and should be treated like a password. Do not expose this to end users.
 
-> NOTE: Client IDs are **required for all API calls** made by an application - regardless if the API call requires authenticated or not. Any application not including a Client ID may have privileges revoked.
+> NOTE: Client IDs are **required for all API calls** made by an application - regardless if the API call requires authentication or not. **Any application not including** a Client ID may have privileges revoked.
 
 Authenticating THETA.tv users with your application has the following flow:
 1. Have the user login and grant permission to your application on THETA.tv.
@@ -90,7 +90,7 @@ If you are making an authorized call on the streamer/channel or user's behalf, i
 ## Application Functionality
 Application functionality is restricted to the APIs available in the API reference. If you need additional APIs for your application, ask a THETA.tv staff member.
 
-> NOTE: application functionality cannot distract or take away users from the streamer's attention. If your application is found to perform functionality that the streamer did not initiate, it can have privileges revoked.
+> NOTE: application functionality must reflect streamer's intentions. If your application is found to perform functionality that the streamer did not initiate, it can have privileges revoked.
 
 ## Chat
 Your application can make use of the chat messages. THETA.tv currently uses the PubNub service to drive chat. The steps to listening to chat messages are:
