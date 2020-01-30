@@ -7,7 +7,7 @@ https://documenter.getpostman.com/view/945111/SW7UapnJ
 
 
 # Introduction
-Creating applications that integrate with SLIVER.tv involves a few steps:
+Creating oAuth applications that integrate with SLIVER.tv involves a few steps:
 1. Creating a user on SLIVER.tv to be your developer account
 2. Registering your application with a SLIVER.tv staff member
 3. Authenticating your users to make API calls on their behalf
