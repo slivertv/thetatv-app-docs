@@ -31,6 +31,7 @@ An application will have the following details. You must have these details read
 
 > NOTE: for internal applications, **YOU MUST DISCLOSE ALL FUNCTIONALITY OF YOUR APPLICATION IN THE DESCRIPTION**. If your application is found to perform additional functionality not mentioned in the description, or if your application doesn't perform all functionality mentioned in the description, it can/will have privileges revoked. 
 
+
 ## Channel Installation (internal applications only)
 By default, your application is not discoverable by streamers until you ask a THETA.tv staff member to list your application. Once installed in a channel, permission is automatically granted to your application to make API calls on behalf of the streamer/channel. 
 Channel authentication is required when your application is making API calls on behalf of the channel/streamer. To get the list of streamers that have installed your application, and get the access tokens, you can make the API call to list all streamers/channels that have installed your application.
