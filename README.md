@@ -1,5 +1,5 @@
-# THETA.tv API Docs
-Public APIs for THETA.tv Applications
+# THETA.tv App Docs
+Building THETA.tv Applications
 
 API Reference:
 https://documenter.getpostman.com/view/945111/SW7UapnJ
